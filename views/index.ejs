@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weatherly</title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=OpenSans:300" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <fieldset>
+            <form action="/" method="post">
+                <input class="ghost-input" type="text" name="city" placeholder="Enter a city" required>
+                <input class="ghost-button" id="submit" type="submit" value="Get Weather">
+            </form>
+            <% if (weather !== null) { %>
+                <p><%= weather%></p>
+            <% } %><% if (error !== null) { %>
+                <p><%= error%></p>
+            <% } %>
+        </fieldset>
+    </div>
+</body>
+</html>
